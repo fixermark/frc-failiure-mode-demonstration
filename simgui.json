@@ -1,0 +1,83 @@
+{
+  "HALProvider": {
+    "Other Devices": {
+      "Victor SPX[1]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Victor SPX[2]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Victor SPX[3]": {
+        "header": {
+          "open": true
+        }
+      }
+    }
+  },
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/Motors": "Subsystem",
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler"
+    }
+  },
+  "NetworkTables": {
+    "SmartDashboard": {
+      "Victor SPX [1]": {
+        "open": true
+      },
+      "Victor SPX [2]": {
+        "open": true
+      },
+      "Victor SPX [3]": {
+        "open": true
+      },
+      "open": true
+    }
+  },
+  "NetworkTables View": {
+    "visible": false
+  },
+  "Plot": {
+    "Plot <0>": {
+      "plots": [
+        {
+          "height": 324,
+          "series": [
+            {
+              "color": [
+                0.2980392277240753,
+                0.44705885648727417,
+                0.6901960968971252,
+                1.0
+              ],
+              "id": "CANMotor:Victor SPX[1]-percentOutput"
+            },
+            {
+              "color": [
+                0.8666667342185974,
+                0.5176470875740051,
+                0.32156863808631897,
+                1.0
+              ],
+              "id": "CANMotor:Victor SPX[2]-percentOutput"
+            },
+            {
+              "color": [
+                0.3333333432674408,
+                0.658823549747467,
+                0.4078431725502014,
+                1.0
+              ],
+              "id": "CANMotor:Victor SPX[3]-percentOutput"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
