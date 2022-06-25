@@ -12,13 +12,11 @@ public class FightCommand extends CommandBase {
 
     @Override
     public void execute() {
-        /** This may fight because the periodic in the subsystem is trying to set the speed continuously */
-        motors.setMotorSpeed(0, 0.5);
+        motors.setMotorSpeed(0, -0.05);
     }
 
     @Override
     public void end(boolean interrupted) {
-        motors.setMotorSpeed(0,0);
+        motors.setMotorSpeed(0, 0);
     }
-
 }

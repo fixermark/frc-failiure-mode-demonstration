@@ -46,6 +46,11 @@
     "Plot <0>": {
       "plots": [
         {
+          "axis": [
+            {
+              "max": 0.3
+            }
+          ],
           "height": 324,
           "series": [
             {

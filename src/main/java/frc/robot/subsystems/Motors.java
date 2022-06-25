@@ -64,15 +64,15 @@ public class Motors extends SubsystemBase {
 
   @Override
   public void periodic() {
-    setMotorSpeed(0, 0.2);
+    setMotorSpeed(0, 0.05);
 
     if (hitCounter > 0) {
       hitCounter--;
       setMotorSpeed(1, 0.0);
       setMotorSpeed(2, 0.0);
     } else {
-      setMotorSpeed(1, 0.2);
-      setMotorSpeed(2, 0.5);
+      setMotorSpeed(1, 0.05);
+      setMotorSpeed(2, 0.05);
     }
   }
 }

@@ -6,10 +6,10 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.commands.BrownoutDemo;
 import frc.robot.commands.FightCommand;
 import frc.robot.commands.NullPointerCommand;
 import frc.robot.subsystems.Motors;
-import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 /**
@@ -25,7 +25,7 @@ public class RobotContainer {
   private final XboxController controller = new XboxController(0);
   private final JoystickButton aButton = new JoystickButton(controller, XboxController.Button.kA.value);
   private final JoystickButton bButton = new JoystickButton(controller, XboxController.Button.kB.value);
-  //private final JoystickButton xButton = new JoystickButton(controller, XboxController.Button.kX.value);
+  private final JoystickButton xButton = new JoystickButton(controller, XboxController.Button.kX.value);
   private final JoystickButton leftBumper = new JoystickButton(controller, XboxController.Button.kLeftBumper.value);
   private final JoystickButton rightBumper = new JoystickButton(controller, XboxController.Button.kRightBumper.value);
 
@@ -45,6 +45,7 @@ public class RobotContainer {
   private void configureButtonBindings() {
     aButton.whenHeld(new FightCommand(this.motors));
     bButton.whenPressed(() -> motors.takeHit());
+    xButton.whenHeld(new BrownoutDemo(this.motors));
     leftBumper.and(rightBumper).whenActive(new NullPointerCommand(this));
   }
 }
